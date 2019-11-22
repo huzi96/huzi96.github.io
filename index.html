@@ -1,525 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <link rel="icon" type="image/x-icon" href="images/YH.png" />
-    <title>Yueyu Hu</title>
-    <!--Import Google Icon Font-->
-    
-    <!--<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">-->
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="css/main.css">
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <style>
-        body
-        {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        }
-        .vertical-nav
-        {
-            margin: 0;
-            position: fixed;
-            width: 300px;
-            /*background-color: #343131;*/
-            min-height: 100%;
-            background-image: url("images/vertical_Nov19.jpg");
-            background-repeat: round;
-        }
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="images/YH.png" />
+  <title>Yueyu Hu</title>
+  <!--Import Google Icon Font-->
 
-        .profile-block
-        {
-            position: relative;
-            height: 300px;
-            /*background-color: #324D5C;*/
+  <!--<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">-->
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <style>
+    body
+    {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .vertical-nav
+    {
+      margin: 0;
+      position: fixed;
+      width: 300px;
+      /*background-color: #343131;*/
+      min-height: 100%;
+      background-image: url("images/vertical_Nov19.jpg");
+      background-repeat: round;
+    }
 
-        }
-        .profile-block-sm
-        {
-            position: relative;
-            height: 200px;
-            /*background-color: #324D5C;*/
+    .profile-block
+    {
+      position: relative;
+      height: 300px;
+      /*background-color: #324D5C;*/
 
-        }
+    }
+    .profile-block-sm
+    {
+      position: relative;
+      height: 200px;
+      /*background-color: #324D5C;*/
 
-        .profile
-        {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 50%;
-            margin-left: 30px;
+    }
 
-            border: solid 5px #F4D03F;
-        }
+    .profile
+    {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      margin-left: 30px;
 
-        .profile-sm
-        {
-            /*position: absolute;*/
-            /*top: 50%;*/
-            /*left: 50%;*/
-            /*transform: translateX(50%);*/
-            border-radius: 50%;
-            margin: auto;
+      border: solid 5px #F4D03F;
+    }
 
-            border: solid 5px #F4D03F;
-        }
+    .profile-sm
+    {
+      /*position: absolute;*/
+      /*top: 50%;*/
+      /*left: 50%;*/
+      /*transform: translateX(50%);*/
+      border-radius: 50%;
+      margin: auto;
 
-        .logo-link
-        {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        .card-content
-        {
-            padding: 0 !important;
-        }
+      border: solid 5px #F4D03F;
+    }
 
-        .card-title
-        {
-            background-color: #FBD8B0;
-            padding: 12px;
-        }
+    .logo-link
+    {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .card-content
+    {
+      padding: 0 !important;
+    }
 
-        p
-        {
-            line-height: 150%;
-        }
-        li
-        {
-            padding-bottom: 10px;
-        }
-        strong
-        {
-            font-weight: bolder;
-        }
-        .project-item
-        {
-        }
-        .project-logo
-        {
-        }
-    </style>
+    .card-title
+    {
+      background-color: #FBD8B0;
+      padding: 12px;
+    }
+
+    p
+    {
+      line-height: 150%;
+    }
+    li
+    {
+      padding-bottom: 10px;
+    }
+    strong
+    {
+      font-weight: bolder;
+    }
+    .project-item
+    {
+    }
+    .project-logo
+    {
+    }
+  </style>
 </head>
 <body>
 <div class="vertical-nav hide-on-small-and-down">
-    <div class="profile-block">
-        <img src="images/profile.jpg" width="240px" class="profile">
-    </div>
-    <div style="color: #F8F8f8; font-size: large; margin-top: -30px" class="center-align">
-        <p style="">Yueyu HU, 胡越予</p>
-        <p style="padding-bottom: 30px; font-size: medium;">Master Candidate, Peking University</p>
-        <span class="logo-link">
+  <div class="profile-block">
+    <img src="images/profile.jpg" width="240px" class="profile">
+  </div>
+  <div style="color: #F8F8f8; font-size: large; margin-top: -30px" class="center-align">
+    <p style="">Yueyu HU, 胡越予</p>
+    <p style="padding-bottom: 30px; font-size: medium;">Master Candidate, Peking University</p>
+    <span class="logo-link">
             <a href="https://scholar.google.com/citations?user=MkWer14AAAAJ">
                 <img src="images/google-scholar-logo.png" style="width: 30px">
             </a>
         </span>
-        <span class="logo-link">
+    <span class="logo-link">
             <a href="https://instagram.com/minoshirod/">
                 <img src="images/Instagram.png" style="width: 30px">
             </a>
         </span>
-        <span class="logo-link">
+    <span class="logo-link">
             <a href="https://github.com/huzi96">
                 <img src="images/GitHub-Mark-Light-120px-plus.png" style="width: 30px">
             </a>
         </span>
 
-        <span class="logo-link">
+    <span class="logo-link">
             <a href="https://www.facebook.com/yueyuhu">
                 <img src="images/FB-f-Logo__white_100.png" style="width: 30px">
             </a>
         </span>
 
 
-    </div>
+  </div>
 </div>
 
 <div class="hide-on-small-and-down">
-    <div style="padding-left: 300px">
-        <div class="row" style="">
-            <div class="container" style="width: 80%;">
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                        <div class="card">
-                            <div class="card-content" style="color: #30505D;">
-                                <span class="card-title" style="">About Me</span>
-                                <p style="padding: 24px; font-size: large;">I am currently pursuing the Master degree with the Institute of Computer Science
-                                    and Technology, Peking University, advised by
-                                    <a href="http://www.icst.pku.edu.cn/struct/people/liujiaying.html">Prof. Jiaying Liu</a>
-                                    at <a href="http://www.icst.pku.edu.cn/struct/struct.html">STRUCT</a>. My research interests
-                                    include computer vision, machine learning and image/video compression. I am also interested
-                                    in
-                                    <a href="https://instagram.com/minoshirod/">photography</a>,
-                                    trains and railways, meteorology, science-fiction and computer network development.</p>
-                            </div>
-                            <!--<div class="card-action">-->
-                            <!--<a href="#">Gallery</a>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l12">
-                        <div class="card">
-                            <div class="card-content" style="color: #30505D">
-                                <span class="card-title">Selected Publications</span>
-                                <ol>
-                                    <li>
-                                        <strong>Yueyu Hu</strong>, Wenhan Yang, and Jiaying Liu.
-                                        "Coarse-to-Fine Hyper-Prior Modeling for Learned Image Compression",
-                                        <i>Accepted by AAAI Conference on Artificial Intelligence</i> (<i>AAAI</i>), 2020.
-                                    </li>
-                                    <li>
-                                        <strong>Yueyu Hu</strong>, Wenhan Yang, Mading Li, and Jiaying Liu.
-                                        "Progressive Spatial Recurrent Neural Network for Intra Prediction",
-                                        <i>IEEE Transactions on Multimedia</i> (<i>TMM</i>), 2019.
-                                        <a href="https://ieeexplore.ieee.org/abstract/document/8727931/">[PDF]</a>
-                                    </li>
-                                    <li><strong>Yueyu Hu</strong>, Wenhan Yang, Sifeng Xia, Wen-Huang Cheng, and Jiaying Liu. &quot;Enhanced
-                                        Intra Prediction with Recurrent Neural Network in Video Coding&quot;, <i>
-                                            Data Compression Conference</i> (<i>DCC</i>), 2018.
-                                        <a href="http://39.96.165.147/Pub%20Files/2018/hyy_dcc18.pdf">[PDF]</a>
-                                    </li>
-                                    <li>
-                                        <strong>Yueyu Hu</strong>, Wenhan Yang, Sifeng Xia, and Jiaying Liu.
-                                        "Optimized Recurrent Network for Intra Prediction in Video Coding",
-                                        <i>IEEE International Conference on Visual Communication and Image</i> (<i>VCIP</i>), 2018.
-                                        <a href="http://39.96.165.147/Pub%20Files/2018/hyy_vcip18.pdf">[pdf]</a>
-                                    </li>
-                                    <li><strong>Yueyu Hu</strong>, Chunhui Liu, Yanghao Li, Sijie Song and Jiaying Liu. &quot;Temporal
-                                        Perceptive Network for Skeleton-Based Action Recognition&quot;, <i>British Machine
-                                            Vision Conference</i> (<i>BMVC</i>), 2017.
-                                        <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/hyy_bmvc17.pdf">[pdf]</a>
-                                    </li>
-
-                                    <!--                                    <li><strong>Yueyu Hu</strong>, Jiaying Liu, Wenhan Yang, Shihong Deng, Luyao Zhang, and Zongming Guo.-->
-                                    <!--                                        &quot;Real-Time Deep Image Super-Resolution via Global Context Aggregation and-->
-                                    <!--                                        Local Queue Jumping&quot;, <i>IEEE International Conference on Visual Communication-->
-                                    <!--                                            and Image</i> (<i>VCIP</i>), St. Petersburg, Florida, Dec. 2017.-->
-                                    <!--                                        <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/hyy_vcip17.pdf">[pdf]</a>-->
-                                    <!--                                    </li>-->
-
-                                    <li>Chunhui Liu, <strong>Yueyu Hu</strong>, Yanghao Li, Sijie Song, and Jiaying Liu. &quot;PKU-MMD: A
-                                        Large Scale Benchmark for Skeleton-Based Human Action Understanding&quot;, <i>ACM
-                                            Multimedia</i> (<i>ACM MM</i>) <i>Workshop</i>, 2017. <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/lch_mm17.pdf">[pdf]</a>
-                                    </li>
-
-                                    <li>
-                                        Jiaying Liu, Sijie Song, Chunhui Liu, Yanghao Li, and <strong>Yueyu Hu</strong>.
-                                        "A Benchmark Dataset and Comparison Study for Multi-Modal Human Action",
-                                        <i>ACM Transactions on Multimedia Computing, Communications, and Applications</i>(<i>TOMM</i>), 2019.
-                                        <a href="http://39.96.165.147/Projects/PKUMMD/PKU-MMD.html">[Dataset]</a>
-                                    </li>
-
-                                    <p style="padding-bottom: 10px; ">
-                                        <a href="https://scholar.google.com/citations?user=MkWer14AAAAJ" style="font-size: large; color: #F4D03F ">
-                                            [Full list of publications]</a>
-                                    </p>
-
-                                    <!--                                    <li>Sifeng Xia, Wenhan Yang, <strong>Yueyu Hu</strong>, Siwei Ma, and Jiaying Liu. &quot;A Group-->
-                                    <!--                                        Variational Transformation Neural Network for Fractional Interpolation of Video-->
-                                    <!--                                        Coding&quot;, <i>Accepted by Data Compression Conference</i> (<i>DCC</i>),-->
-                                    <!--                                        2018.-->
-                                    <!--                                    </li>-->
-
-                                    <!--                                    <li>Wenhan Yang, Shihong Deng, <strong>Yueyu Hu</strong>, Junliang Xing, and Jiaying Liu. &quot;-->
-                                    <!--                                        Real-Time Deep Video SpaTial Resolution UpConversion SysTem (STRUCT++ Demo)-->
-                                    <!--                                        &quot;, <i>ACM Multimedia</i> (<i>ACM MM</i>) <i>Demo</i>, Silicon Valley,-->
-                                    <!--                                        California, U.S., Oct. 2017.-->
-                                    <!--                                        <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/ywh_mm17.pdf">[pdf]</a>-->
-                                    <!--                                    </li>-->
-
-                                    <!--                                    <li>Chunhui Liu, Yanghao Li, <strong>Yueyu Hu</strong> and Jiaying Liu. &quot;Online Action Detection-->
-                                    <!--                                        and Forecast via Multi-Task Deep Recurrent Neural Network&quot;, <i>IEEE International-->
-                                    <!--                                            Conference on Acoustics, Speech, and Signal Processing</i> (<i>ICASSP</i>),-->
-                                    <!--                                        New Orleans, LA, Mar. 2017. <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/lch_icassp17.pdf">[pdf]</a>-->
-                                    <!--                                    </li>-->
-
-                                </ol>
-                            </div>
-                            <!--<div class="card-action">-->
-                            <!--<a href="#">Gallery</a>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l12">
-                        <div class="card">
-                            <div class="card-content" style="color: #30505D;">
-                                <span class="card-title" style="">Projects</span>
-                                <div class="project-item">
-                                    <table>
-                                        <tr>
-                                            <td style="width: 20%">
-                                                <div class="project-logo">
-                                                    <img src="images/ucc.jpg" style="width: 80%">
-                                                </div>
-                                            </td>
-                                            <td style="width: 70%;">
-                                                <div class="" >
-                                                    <p style="font-size: 18pt;">
-                                                        Distributed Caffe on Mobile Devices
-                                                    </p>
-                                                    <p>
-                                                        A port of Caffe on Android devices, supporting parallel training
-                                                        of neural networks over Wi-Fi network of multiple devices.
-                                                    </p>
-                                                    <p>
-                                                        <a href="https://github.com/huzi96/caffe-android-lib-distro">[Code]</a>
-                                                        <a href="res/UCC_report-Yueyu_Hu-Hao_Wang.pdf">[PDF]</a>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 20%">
-                                                <div class="project-logo">
-                                                    <img src="images/sub_edit.png" style="width: 80%">
-                                                </div>
-                                            </td>
-                                            <td style="width: 70%;">
-                                                <div class="" >
-                                                    <p style="font-size: 18pt;">
-                                                        Subtitle Editor
-                                                    </p>
-                                                    <p>
-                                                        A GUI software written in C# to add subtitles to videos. This is
-                                                        the project of the course <em>C# Programming and Application</em>.
-                                                    </p>
-                                                    <p>
-                                                        <a href="https://github.com/huzi96/SubtitleEditor">[Code]</a>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
+  <div style="padding-left: 300px">
+    <div class="row" style="">
+      <div class="container" style="width: 80%;">
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="card">
+              <div class="card-content" style="color: #30505D;">
+                <span class="card-title" style="">About Me</span>
+                <p style="padding: 24px; font-size: large;">I am currently pursuing the Master degree with the Institute of Computer Science
+                  and Technology, Peking University, advised by
+                  <a href="http://www.icst.pku.edu.cn/struct/people/liujiaying.html">Prof. Jiaying Liu</a>
+                  at <a href="http://www.icst.pku.edu.cn/struct/struct.html">STRUCT</a>. My research interests
+                  include computer vision, machine learning and image/video compression. I am also interested
+                  in
+                  <a href="https://instagram.com/minoshirod/">photography</a>,
+                  trains and railways, meteorology, science-fiction and computer network development.</p>
+              </div>
             </div>
+          </div>
+          <div class="col s12 m12 l12">
+            <div class="card">
+              <div class="card-content" style="color: #30505D">
+                <span class="card-title">Selected Publications</span>
+                <ol>
+                  <li>
+                    <strong>Yueyu Hu</strong>, Wenhan Yang, and Jiaying Liu.
+                    "Coarse-to-Fine Hyper-Prior Modeling for Learned Image Compression",
+                    <i>Accepted by AAAI Conference on Artificial Intelligence</i> (<i>AAAI</i>), 2020.
+                  </li>
+                  <li>
+                    <strong>Yueyu Hu</strong>, Wenhan Yang, Mading Li, and Jiaying Liu.
+                    "Progressive Spatial Recurrent Neural Network for Intra Prediction",
+                    <i>IEEE Transactions on Multimedia</i> (<i>TMM</i>), 2019.
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8727931/">[PDF]</a>
+                  </li>
+                  <li><strong>Yueyu Hu</strong>, Wenhan Yang, Sifeng Xia, Wen-Huang Cheng, and Jiaying Liu. &quot;Enhanced
+                    Intra Prediction with Recurrent Neural Network in Video Coding&quot;, <i>
+                      Data Compression Conference</i> (<i>DCC</i>), 2018.
+                    <a href="http://39.96.165.147/Pub%20Files/2018/hyy_dcc18.pdf">[PDF]</a>
+                  </li>
+                  <li>
+                    <strong>Yueyu Hu</strong>, Wenhan Yang, Sifeng Xia, and Jiaying Liu.
+                    "Optimized Recurrent Network for Intra Prediction in Video Coding",
+                    <i>IEEE International Conference on Visual Communication and Image</i> (<i>VCIP</i>), 2018.
+                    <a href="http://39.96.165.147/Pub%20Files/2018/hyy_vcip18.pdf">[pdf]</a>
+                  </li>
+                  <li><strong>Yueyu Hu</strong>, Chunhui Liu, Yanghao Li, Sijie Song and Jiaying Liu. &quot;Temporal
+                    Perceptive Network for Skeleton-Based Action Recognition&quot;, <i>British Machine
+                      Vision Conference</i> (<i>BMVC</i>), 2017.
+                    <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/hyy_bmvc17.pdf">[pdf]</a>
+                  </li>
+
+                  <li>Chunhui Liu, <strong>Yueyu Hu</strong>, Yanghao Li, Sijie Song, and Jiaying Liu. &quot;PKU-MMD: A
+                    Large Scale Benchmark for Skeleton-Based Human Action Understanding&quot;, <i>ACM
+                      Multimedia</i> (<i>ACM MM</i>) <i>Workshop</i>, 2017. <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/lch_mm17.pdf">[pdf]</a>
+                  </li>
+
+                  <li>
+                    Jiaying Liu, Sijie Song, Chunhui Liu, Yanghao Li, and <strong>Yueyu Hu</strong>.
+                    "A Benchmark Dataset and Comparison Study for Multi-Modal Human Action",
+                    <i>ACM Transactions on Multimedia Computing, Communications, and Applications</i>(<i>TOMM</i>), 2019.
+                    <a href="http://39.96.165.147/Projects/PKUMMD/PKU-MMD.html">[Dataset]</a>
+                  </li>
+
+                  <p style="padding-bottom: 10px; ">
+                    <a href="https://scholar.google.com/citations?user=MkWer14AAAAJ" style="font-size: large; color: #F4D03F ">
+                      [Full list of publications]</a>
+                  </p>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l12">
+            <div class="card">
+              <div class="card-content" style="color: #30505D;">
+                <span class="card-title" style="">Projects</span>
+                <div class="project-item">
+                  <table>
+                    <tr>
+                      <td style="width: 20%">
+                        <div class="project-logo">
+                          <img src="images/ucc.jpg" style="width: 80%">
+                        </div>
+                      </td>
+                      <td style="width: 70%;">
+                        <div class="" >
+                          <p style="font-size: 18pt;">
+                            Distributed Caffe on Mobile Devices
+                          </p>
+                          <p>
+                            A port of Caffe on Android devices, supporting parallel training
+                            of neural networks over Wi-Fi network of multiple devices.
+                          </p>
+                          <p>
+                            <a href="https://github.com/huzi96/caffe-android-lib-distro">[Code]</a>
+                            <a href="res/UCC_report-Yueyu_Hu-Hao_Wang.pdf">[PDF]</a>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 20%">
+                        <div class="project-logo">
+                          <img src="images/sub_edit.png" style="width: 80%">
+                        </div>
+                      </td>
+                      <td style="width: 70%;">
+                        <div class="" >
+                          <p style="font-size: 18pt;">
+                            Subtitle Editor
+                          </p>
+                          <p>
+                            A GUI software written in C# to add subtitles to videos. This is
+                            the project of the course <em>C# Programming and Application</em>.
+                          </p>
+                          <p>
+                            <a href="https://github.com/huzi96/SubtitleEditor">[Code]</a>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
-<!--<div class="hide-on-large-only">-->
-<!--<div class="profile-block">-->
-<!--<img src="images/profile.jpg" width="240px" class="profile">-->
-<!--</div>-->
-<!--<div style="color: #F8F8f8; font-size: large; margin-top: -30px" class="center-align">-->
-<!--<p style="padding-bottom: 30px">Yueyu HU (胡越予)</p>-->
-<!--<span class="logo-link">-->
-<!--<a href="https://github.com/huzi96">-->
-<!--<img src="images/GitHub-Mark-Light-120px-plus.png" style="width: 30px">-->
-<!--</a>-->
-<!--</span>-->
-
-<!--<span class="logo-link">-->
-<!--<a href="https://www.facebook.com/yueyuhu">-->
-<!--<img src="images/FB-f-Logo__white_100.png" style="width: 30px">-->
-<!--</a>-->
-<!--</span>-->
-
-<!--<span class="logo-link">-->
-<!--<a href="https://twitter.com/yueyu_hu">-->
-<!--<img src="images/Twitter_Logo_WhiteOnImage.png" style="width: 30px">-->
-<!--</a>-->
-<!--</span>-->
-
-<!--</div>-->
-<!--</div>-->
 
 <div class="hide-on-med-and-up">
-    <div>
-        <div class="row" style="">
-            <div>
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                        <div class="">
-                            <div class="card-content" style="color: #30505D; background-color: #FBD8B0">
-                                <div class="profile-block-sm center-align">
-                                    <img src="images/profile.jpg" width="240px" class="profile-sm center-align">
-                                </div>
-                                <div style="color: #F8F8f8; font-size: large; margin-top: 50px; padding-bottom: 10px" class="center-align">
-                                    <p style="color: black">Yueyu HU, 胡越予</p>
-                                    <p style="font-size: medium; color: black;">Master Candidate, Peking University</p>
-                                    <span class="logo-link">
+  <div>
+    <div class="row" style="">
+      <div>
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="">
+              <div class="card-content" style="color: #30505D; background-color: #FBD8B0">
+                <div class="profile-block-sm center-align">
+                  <img src="images/profile.jpg" width="240px" class="profile-sm center-align">
+                </div>
+                <div style="color: #F8F8f8; font-size: large; margin-top: 50px; padding-bottom: 10px" class="center-align">
+                  <p style="color: black">Yueyu HU, 胡越予</p>
+                  <p style="font-size: medium; color: black;">Master Candidate, Peking University</p>
+                  <span class="logo-link">
                                         <a href="https://scholar.google.com/citations?user=MkWer14AAAAJ">
                                             <img src="images/google-scholar-logo.png" style="width: 30px">
                                         </a>
                                     </span>
-                                                                <span class="logo-link">
+                  <span class="logo-link">
                                         <a href="https://instagram.com/minoshirod/">
                                             <img src="images/Instagram.png" style="width: 30px">
                                         </a>
                                     </span>
-                                                                <span class="logo-link">
+                  <span class="logo-link">
                                         <a href="https://github.com/huzi96">
                                             <img src="images/GitHub-Mark-Light-120px-plus.png" style="width: 30px">
                                         </a>
                                     </span>
 
-                                                                <span class="logo-link">
+                  <span class="logo-link">
                                         <a href="https://www.facebook.com/yueyuhu">
                                             <img src="images/FB-f-Logo__white_100.png" style="width: 30px">
                                         </a>
                                     </span>
-                                </div>
-                            </div>
-                            <!--<div class="card-action">-->
-                            <!--<a href="#">Gallery</a>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l12">
-                        <div class="card">
-                            <div class="card-content" style="color: #30505D;">
-                                <span class="card-title" style="">About Me</span>
-                                <p style="padding: 24px;">I am currently pursuing the Master degree with the Institute of Computer Science
-                                    and Technology, Peking University, advised by
-                                    <a href="http://www.icst.pku.edu.cn/struct/people/liujiaying.html">Prof. Jiaying Liu</a>
-                                    at <a href="http://www.icst.pku.edu.cn/struct/struct.html">STRUCT</a>. My research interests
-                                    include computer vision, machine learning and image/video compression. I am also interested
-                                    in
-                                    <a href="https://instagram.com/minoshirod/">photography</a>,
-                                    trains and railways, meteorology, science-fiction and computer network development.</p>
-                            </div>
-                            <!--<div class="card-action">-->
-                            <!--<a href="#">Gallery</a>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l12">
-                        <div class="card">
-                            <div class="card-content" style="color: #30505D">
-                                <span class="card-title">Selected Publications</span>
-                                <ol>
-                                    <li>
-                                        <strong>Yueyu Hu</strong>, Wenhan Yang, and Jiaying Liu.
-                                        "Coarse-to-Fine Hyper-Prior Modeling for Learned Image Compression",
-                                        <i>Accepted by AAAI Conference on Artificial Intelligence</i> (<i>AAAI</i>), 2020.
-                                    </li>
-                                    <li>
-                                        <strong>Yueyu Hu</strong>, Wenhan Yang, Mading Li, and Jiaying Liu.
-                                        "Progressive Spatial Recurrent Neural Network for Intra Prediction",
-                                        <i>IEEE Transactions on Multimedia</i> (<i>TMM</i>), 2019.
-                                        <a href="https://ieeexplore.ieee.org/abstract/document/8727931/">[PDF]</a>
-                                    </li>
-                                    <li><strong>Yueyu Hu</strong>, Wenhan Yang, Sifeng Xia, Wen-Huang Cheng, and Jiaying Liu. &quot;Enhanced
-                                        Intra Prediction with Recurrent Neural Network in Video Coding&quot;, <i>
-                                            Data Compression Conference</i> (<i>DCC</i>), 2018.
-                                        <a href="http://39.96.165.147/Pub%20Files/2018/hyy_dcc18.pdf">[PDF]</a>
-                                    </li>
-                                    <li>
-                                        <strong>Yueyu Hu</strong>, Wenhan Yang, Sifeng Xia, and Jiaying Liu.
-                                        "Optimized Recurrent Network for Intra Prediction in Video Coding",
-                                        <i>IEEE International Conference on Visual Communication and Image</i> (<i>VCIP</i>), 2018.
-                                        <a href="http://39.96.165.147/Pub%20Files/2018/hyy_vcip18.pdf">[pdf]</a>
-                                    </li>
-                                    <li><strong>Yueyu Hu</strong>, Chunhui Liu, Yanghao Li, Sijie Song and Jiaying Liu. &quot;Temporal
-                                        Perceptive Network for Skeleton-Based Action Recognition&quot;, <i>British Machine
-                                            Vision Conference</i> (<i>BMVC</i>), 2017.
-                                        <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/hyy_bmvc17.pdf">[pdf]</a>
-                                    </li>
-
-                                    <!--                                    <li><strong>Yueyu Hu</strong>, Jiaying Liu, Wenhan Yang, Shihong Deng, Luyao Zhang, and Zongming Guo.-->
-                                    <!--                                        &quot;Real-Time Deep Image Super-Resolution via Global Context Aggregation and-->
-                                    <!--                                        Local Queue Jumping&quot;, <i>IEEE International Conference on Visual Communication-->
-                                    <!--                                            and Image</i> (<i>VCIP</i>), St. Petersburg, Florida, Dec. 2017.-->
-                                    <!--                                        <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/hyy_vcip17.pdf">[pdf]</a>-->
-                                    <!--                                    </li>-->
-
-                                    <li>Chunhui Liu, <strong>Yueyu Hu</strong>, Yanghao Li, Sijie Song, and Jiaying Liu. &quot;PKU-MMD: A
-                                        Large Scale Benchmark for Skeleton-Based Human Action Understanding&quot;, <i>ACM
-                                            Multimedia</i> (<i>ACM MM</i>) <i>Workshop</i>, 2017. <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/lch_mm17.pdf">[pdf]</a>
-                                    </li>
-
-                                    <li>
-                                        Jiaying Liu, Sijie Song, Chunhui Liu, Yanghao Li, and <strong>Yueyu Hu</strong>.
-                                        "A Benchmark Dataset and Comparison Study for Multi-Modal Human Action",
-                                        <i>ACM Transactions on Multimedia Computing, Communications, and Applications</i>(<i>TOMM</i>), 2019.
-                                        <a href="http://39.96.165.147/Projects/PKUMMD/PKU-MMD.html">[Dataset]</a>
-                                    </li>
-                                    <p style="font-size: medium; padding-bottom: 5px; ">
-                                        <a href="https://scholar.google.com/citations?user=MkWer14AAAAJ" style="color: #F4D03F ">
-                                            [Full list of publications]</a>
-                                    </p>
-                                </ol>
-                            </div>
-                            <!--<div class="card-action">-->
-                            <!--<a href="#">Gallery</a>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <div class="col s12 m12 l12">
-                        <div class="card">
-                            <div class="card-content" style="color: #30505D;">
-                                <span class="card-title" style="">Projects</span>
-                                <div class="project-item">
-                                    <table>
-                                        <tr>
-                                            <td style="width: 20%">
-                                                <div class="project-logo">
-                                                    <img src="images/ucc.jpg" style="width: 80%">
-                                                </div>
-                                            </td>
-                                            <td style="width: 70%;">
-                                                <div class="" >
-                                                    <p style="font-size: 18pt;">
-                                                        Distributed Caffe on Mobile Devices
-                                                    </p>
-                                                    <p>
-                                                        A port of Caffe on Android devices, supporting parallel training
-                                                        of neural networks over Wi-Fi network of multiple devices.
-                                                    </p>
-                                                    <p>
-                                                        <a href="https://github.com/huzi96/caffe-android-lib-distro">[Code]</a>
-                                                        <a href="res/UCC_report-Yueyu_Hu-Hao_Wang.pdf">[PDF]</a>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="width: 20%">
-                                                <div class="project-logo">
-                                                    <img src="images/sub_edit.png" style="width: 80%">
-                                                </div>
-                                            </td>
-                                            <td style="width: 70%;">
-                                                <div class="" >
-                                                    <p style="font-size: 18pt;">
-                                                        Subtitle Editor
-                                                    </p>
-                                                    <p>
-                                                        A GUI software written in C# to add subtitles to videos. This is
-                                                        the project of the course <em>C# Programming and Application</em>.
-                                                    </p>
-                                                    <p>
-                                                        <a href="https://github.com/huzi96/SubtitleEditor">[Code]</a>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="col s12 m12 l12">
+            <div class="card">
+              <div class="card-content" style="color: #30505D;">
+                <span class="card-title" style="">About Me</span>
+                <p style="padding: 24px;">I am currently pursuing the Master degree with the Institute of Computer Science
+                  and Technology, Peking University, advised by
+                  <a href="http://www.icst.pku.edu.cn/struct/people/liujiaying.html">Prof. Jiaying Liu</a>
+                  at <a href="http://www.icst.pku.edu.cn/struct/struct.html">STRUCT</a>. My research interests
+                  include computer vision, machine learning and image/video compression. I am also interested
+                  in
+                  <a href="https://instagram.com/minoshirod/">photography</a>,
+                  trains and railways, meteorology, science-fiction and computer network development.</p>
+              </div>
+              <!--<div class="card-action">-->
+              <!--<a href="#">Gallery</a>-->
+              <!--</div>-->
+            </div>
+          </div>
+          <div class="col s12 m12 l12">
+            <div class="card">
+              <div class="card-content" style="color: #30505D">
+                <span class="card-title">Selected Publications</span>
+                <ol>
+                  <li>
+                    <strong>Yueyu Hu</strong>, Wenhan Yang, and Jiaying Liu.
+                    "Coarse-to-Fine Hyper-Prior Modeling for Learned Image Compression",
+                    <i>Accepted by AAAI Conference on Artificial Intelligence</i> (<i>AAAI</i>), 2020.
+                  </li>
+                  <li>
+                    <strong>Yueyu Hu</strong>, Wenhan Yang, Mading Li, and Jiaying Liu.
+                    "Progressive Spatial Recurrent Neural Network for Intra Prediction",
+                    <i>IEEE Transactions on Multimedia</i> (<i>TMM</i>), 2019.
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8727931/">[PDF]</a>
+                  </li>
+                  <li><strong>Yueyu Hu</strong>, Wenhan Yang, Sifeng Xia, Wen-Huang Cheng, and Jiaying Liu. &quot;Enhanced
+                    Intra Prediction with Recurrent Neural Network in Video Coding&quot;, <i>
+                      Data Compression Conference</i> (<i>DCC</i>), 2018.
+                    <a href="http://39.96.165.147/Pub%20Files/2018/hyy_dcc18.pdf">[PDF]</a>
+                  </li>
+                  <li>
+                    <strong>Yueyu Hu</strong>, Wenhan Yang, Sifeng Xia, and Jiaying Liu.
+                    "Optimized Recurrent Network for Intra Prediction in Video Coding",
+                    <i>IEEE International Conference on Visual Communication and Image</i> (<i>VCIP</i>), 2018.
+                    <a href="http://39.96.165.147/Pub%20Files/2018/hyy_vcip18.pdf">[pdf]</a>
+                  </li>
+                  <li><strong>Yueyu Hu</strong>, Chunhui Liu, Yanghao Li, Sijie Song and Jiaying Liu. &quot;Temporal
+                    Perceptive Network for Skeleton-Based Action Recognition&quot;, <i>British Machine
+                      Vision Conference</i> (<i>BMVC</i>), 2017.
+                    <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/hyy_bmvc17.pdf">[pdf]</a>
+                  </li>
+
+                  <li>Chunhui Liu, <strong>Yueyu Hu</strong>, Yanghao Li, Sijie Song, and Jiaying Liu. &quot;PKU-MMD: A
+                    Large Scale Benchmark for Skeleton-Based Human Action Understanding&quot;, <i>ACM
+                      Multimedia</i> (<i>ACM MM</i>) <i>Workshop</i>, 2017. <a href="http://www.icst.pku.edu.cn/struct/Pub Files/2017/lch_mm17.pdf">[pdf]</a>
+                  </li>
+
+                  <li>
+                    Jiaying Liu, Sijie Song, Chunhui Liu, Yanghao Li, and <strong>Yueyu Hu</strong>.
+                    "A Benchmark Dataset and Comparison Study for Multi-Modal Human Action",
+                    <i>ACM Transactions on Multimedia Computing, Communications, and Applications</i>(<i>TOMM</i>), 2019.
+                    <a href="http://39.96.165.147/Projects/PKUMMD/PKU-MMD.html">[Dataset]</a>
+                  </li>
+                  <p style="font-size: medium; padding-bottom: 5px; ">
+                    <a href="https://scholar.google.com/citations?user=MkWer14AAAAJ" style="color: #F4D03F ">
+                      [Full list of publications]</a>
+                  </p>
+                </ol>
+              </div>
+              <!--<div class="card-action">-->
+              <!--<a href="#">Gallery</a>-->
+              <!--</div>-->
+            </div>
+          </div>
+          <div class="col s12 m12 l12">
+            <div class="card">
+              <div class="card-content" style="color: #30505D;">
+                <span class="card-title" style="">Projects</span>
+                <div class="project-item">
+                  <table>
+                    <tr>
+                      <td style="width: 20%">
+                        <div class="project-logo">
+                          <img src="images/ucc.jpg" style="width: 80%">
+                        </div>
+                      </td>
+                      <td style="width: 70%;">
+                        <div class="" >
+                          <p style="font-size: 18pt;">
+                            Distributed Caffe on Mobile Devices
+                          </p>
+                          <p>
+                            A port of Caffe on Android devices, supporting parallel training
+                            of neural networks over Wi-Fi network of multiple devices.
+                          </p>
+                          <p>
+                            <a href="https://github.com/huzi96/caffe-android-lib-distro">[Code]</a>
+                            <a href="res/UCC_report-Yueyu_Hu-Hao_Wang.pdf">[PDF]</a>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="width: 20%">
+                        <div class="project-logo">
+                          <img src="images/sub_edit.png" style="width: 80%">
+                        </div>
+                      </td>
+                      <td style="width: 70%;">
+                        <div class="" >
+                          <p style="font-size: 18pt;">
+                            Subtitle Editor
+                          </p>
+                          <p>
+                            A GUI software written in C# to add subtitles to videos. This is
+                            the project of the course <em>C# Programming and Application</em>.
+                          </p>
+                          <p>
+                            <a href="https://github.com/huzi96/SubtitleEditor">[Code]</a>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
         </div>
+      </div>
     </div>
+  </div>
 </div>
 </body>
 </html>
