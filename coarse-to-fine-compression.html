@@ -107,9 +107,9 @@
     }
     .authors{
       text-align: center;
-      width: 90%;
+      width: 100%;
       margin: auto;
-      font-size: 14pt;
+      font-size: 12pt;
       padding-top: 20px;
       padding-bottom: 20px;
     }
@@ -147,7 +147,7 @@
             </div>
             <div class="abstract">
               <h3>Abstract</h3>
-              <p style="font-size: 14pt;text-align: justify">Approaches to image compression with machine learning now achieve superior
+              <p style="font-size: 12pt;text-align: justify">Approaches to image compression with machine learning now achieve superior
                 performance on the
                 compression rate compared to existing hybrid codecs. The conventional
                 learning-based methods for image compression exploits hyper-prior and spatial
@@ -166,33 +166,39 @@
             <div class="framework">
               <h3>Framework</h3>
               <img src="images/Imacomp_Arch-web.jpg" width="100%">
-              <p style="font-size: 14pt;text-align: justify; padding-bottom: 40px">
+              <p style="font-size: 12pt;text-align: justify; padding-bottom: 40px">
                 <strong>Fig. 1</strong>. Overall architecture of the multi-layer image compression framework.
                 The probability distribution of the most inner layer of hyper-prior is  approaximated with a zero-mean
                 Gaussian distribution, where the scale values &#x3C3; are channel-wise independent and spatially shared
                 trainable parameters.
               </p>
-              <img src="images/aggregation-web.jpg" width="70%" style="margin-left: 15%;">
-              <p style="font-size: 14pt;text-align: justify;">
+              <img src="images/aggregation-web.jpg" width="90%" style="margin-left: 5%;">
+              <p style="font-size: 12pt;text-align: justify;">
                 <strong>Fig. 2</strong>. Information aggregation subnetwork for the reconstruction of the decoded image.
                 The main latent representation (Main Repr.) and the two layers of hyper representations (L1 Repr. and L2 Repr.)
                 are aggregated for the reconstruction.
               </p>
             </div>
-            <div class="experiment">
+            <div class="experiment container">
               <h3>Experimental Results</h3>
-              <img src="images/kodak_psnr_s.jpg" width="60%" style="margin-left: 20%">
-              <p class="center" style="font-size: 14pt"><strong>Fig. 3</strong>. RD Curve on Kodak Dataset.</p>
-              <img src="images/tecnick_psnr_s.jpg" width="60%" style="margin-left: 20%">
-              <p class="center" style="font-size: 14pt"><strong>Fig. 4</strong>. RD Curve on Tecnick Dataset.</p>
-              <img src="images/visual.jpg" width="100%" style="margin-left: 0">
-              <p class="center" style="font-size: 14pt"><strong>Fig. 5</strong>. Comparison on visual quality with JPEG and BPG.</p>
+              <div class="l6 offset-l3 m6 offset-m3 s12">
+              <img src="images/kodak_psnr_s.jpg" width="100%">
+              <p class="center" style="font-size: 12pt"><strong>Fig. 3</strong>. RD Curve on Kodak Dataset.</p>
+              </div>
+              <div class="l6 offset-l3 m6 offset-m3 s12">
+              <img src="images/tecnick_psnr_s.jpg" width="100%">
+              <p class="center" style="font-size: 12pt"><strong>Fig. 4</strong>. RD Curve on Tecnick Dataset.</p>
+              </div>
             </div>
+              <div class="">
+              <img src="images/visual.jpg"  width="100%">
+              <p class="center" style="font-size: 12pt"><strong>Fig. 5</strong>. Comparison on visual quality with JPEG and BPG.</p>
+              </div>
             <div class="resource">
               <h3>Resources</h3>
-              <p style="font-size: 14pt; margin-left: 20px;"><strong>Paper</strong>: coming in February.</p>
-              <p style="font-size: 14pt; margin-left: 20px;"><strong>Posters</strong>: coming in February.</p>
-              <p style="font-size: 14pt; margin-left: 20px;"><strong>Code</strong>: available soon.</p>
+              <p style="font-size: 12pt; margin-left: 20px;"><strong>Paper</strong>: coming in February.</p>
+              <p style="font-size: 12pt; margin-left: 20px;"><strong>Posters</strong>: coming in February.</p>
+              <p style="font-size: 12pt; margin-left: 20px;"><strong>Code</strong>: available soon.</p>
             </div>
           </div>
         </div>
