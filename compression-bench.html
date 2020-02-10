@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="images/YH.png" />
+  <title>Compression Benchmark</title>
+  <!--Import Google Icon Font-->
+
+  <!--<link href="http://fonts.useso.com/icon?family=Material+Icons" rel="stylesheet">-->
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <style>
+    body
+    {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .vertical-nav
+    {
+      margin: 0;
+      position: fixed;
+      width: 300px;
+      /*background-color: #343131;*/
+      min-height: 100%;
+      background-image: url("images/vertical_Nov19.jpg");
+      background-repeat: round;
+    }
+
+    .profile-block
+    {
+      position: relative;
+      height: 300px;
+      /*background-color: #324D5C;*/
+
+    }
+    .profile-block-sm
+    {
+      position: relative;
+      height: 200px;
+      /*background-color: #324D5C;*/
+
+    }
+
+    .profile
+    {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      margin-left: 30px;
+
+      border: solid 5px #F4D03F;
+    }
+
+    .profile-sm
+    {
+      /*position: absolute;*/
+      /*top: 50%;*/
+      /*left: 50%;*/
+      /*transform: translateX(50%);*/
+      border-radius: 50%;
+      margin: auto;
+
+      border: solid 5px #F4D03F;
+    }
+
+    .logo-link
+    {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .card-content
+    {
+      padding: 0 !important;
+    }
+
+    .card-title
+    {
+      background-color: #FBD8B0;
+      padding: 12px;
+    }
+
+    p
+    {
+      line-height: 150%;
+    }
+    li
+    {
+      padding-bottom: 10px;
+    }
+    strong
+    {
+      font-weight: bolder;
+    }
+    .project-item
+    {
+    }
+    .project-logo
+    {
+    }
+    .authors{
+      text-align: center;
+      width: 100%;
+      margin: auto;
+      font-size: 12pt;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .author{
+      font-weight: bold;
+      display: inline;
+      padding: 0 1em;
+    }
+    h3{
+      font-size: xx-large;
+      display: block;
+      /*font-size: 1.5em;*/
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+    }
+    .bibtex {
+      padding-left: 20px;
+      font-family: Courier New, Courier, 'gandhi_sansregular', monospace;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+
+<div class="">
+  <div style="">
+    <div class="row" style="">
+      <div class="container" style="width: 80%;">
+        <div class="row">
+          <div class="col s12 m12 l10 offset-l1">
+            <div class="title">
+              <h2 class="center" style="margin-top: 100px; font-size: 32pt">
+                Learning End-to-End Lossy Image Compression: A Benchmark
+              </h2>
+            </div>
+            <div class="authors">
+              <div class="author"><a href="https://huzi96.github.io/">Yueyu Hu</a></div><br class="hide-on-med-and-up">
+              <div class="author"><a href="https://flyywh.github.io/">Wenhan Yang</a></div><br class="hide-on-med-and-up">
+              <div class="author"><a href="https://vision.nju.edu.cn/fc/d3/c29470a457939/page.htm">Zhan Ma</a></div><br class="hide-on-med-and-up">
+              <div class="author"><a href="http://www.wict.pku.edu.cn/struct/people/liujiaying.html">Jiaying Liu</a></div><br class="hide-on-med-and-up">
+            </div>
+            <div class="abstract">
+              <h3 class="center">Abstract</h3>
+              <p style="font-size: 12pt;text-align: justify">
+                <strong>Image compression</strong> is one of the most fundamental techniques and commonly used applications in the image
+                and video processing field. Earlier methods built a well-designed pipeline, and efforts were made to
+                improve all modules of the pipeline by handcrafted tuning. Later, tremendous contributions were made,
+                especially when data-driven methods revitalized the domain with their excellent modeling capacities and
+                flexibility in incorporating newly designed modules and constraints. Despite great progress, a systematic
+                benchmark and comprehensive analysis of end-to-end learned image compression methods are lacking.
+                <strong>In this paper, we first conduct a comprehensive literature survey of learned image compression methods.
+                The literature is organized based on several aspects to jointly optimize the rate-distortion performance
+                  with a neural network, i.e., network architecture, entropy model and rate control.</strong> We describe
+                milestones in cutting-edge learned image-compression methods, review a broad range of existing works,
+                and provide insights into their historical development routes. With this survey, the main challenges of
+                image compression methods are revealed, along with opportunities to address the related issues with
+                recent advanced learning methods. This analysis provides an opportunity to take a further step towards
+                higher-efficiency image compression. <strong>By introducing a coarse-to-fine hyperprior model for entropy
+                estimation and signal reconstruction, we achieve improved rate-distortion performance, especially on
+                high-resolution images.</strong> Extensive benchmark experiments demonstrate the superiority of our model in
+                coding efficiency and the potential for acceleration by large-scale parallel computing devices.
+              </p>
+            </div>
+            <div class="experiment">
+              <h3 class="center">Benchmark</h3>
+              <h4>Datasets</h4>
+              <p><strong>[Kodak]</strong>E. Kodak, "Kodak lossless true color image suite (PhotoCD PCD0992)".<br>
+                URL: <a href="http://r0k.us/graphics/kodak/">http://r0k.us/graphics/kodak/</a>
+              </p>
+              <p><strong>[Tecnick]</strong> Asuni, Nicola and Giachetti, Andrea, "TESTIMAGES:
+              a Large-scale Archive for Testing Visual Devices and Basic Image Processing Algorithms,"
+              <i>Eurographics Italian Chapter Conference</i>, 2014.<br>
+                URL: <a href="https://testimages.org/sampling/">https://testimages.org/sampling/</a><br>
+                (40 images with resolution 1200x1200 are used.)
+              </p>
+              <p><strong>[CLIC 19]</strong> CLIC: Workshop and Challenge on Learned Image Compression.<br>
+                URL: <a href="http://www.compression.cc/2019/challenge/">http://www.compression.cc/2019/challenge/</a><br>
+                (The professional and mobile validation sets are used.)
+              </p>
+              <h4>Methods</h4>
+              <div class="l6 offset-l3 m6 offset-m3 s12">
+                <img src="images/Kodak_PSNR.svg" width="80%" style="margin-left: 10%">
+                <p class="center" style="font-size: 12pt"><strong>Fig.1 Benchmark results on the Kodak Dataset.</strong></p>
+              </div>
+              <div class="l6 offset-l3 m6 offset-m3 s12">
+                <p><strong>[PCS-18]</strong> J. Ball´e, "Efficient nonlinear transforms for lossy image compression,"
+                  in <i>Proc. of Picture Coding Symposium</i>, 2018.<br>
+                  URL: <a href="https://github.com/tensorflow/compression">https://github.com/tensorflow/compression</a>
+                </p>
+                <p><strong>[ICLR-18]</strong> J. Ball´e, D. Minnen, S. Singh, S. J. Hwang, and N. Johnston,
+                  "Variational image compression with a scale hyperprior," in <i>Proc.
+                    of International Conference on Learning Representations</i>, 2018.<br>
+                  URL: <a href="https://github.com/tensorflow/compression">https://github.com/tensorflow/compression</a>
+                </p>
+                <p><strong>[NIPS-18]</strong> D. Minnen, J. Ball´e, and G. D. Toderici, "Joint autoregressive and
+                  hierarchical priors for learned image compression," in <i>Proc. of
+                    Advances in Neural Information Processing Systems</i>, 2018.<br>
+                  URL: <a href="https://github.com/tensorflow/compression">https://github.com/tensorflow/compression</a>
+                </p>
+                <p><strong>[ICLR-19]</strong> J. Lee, S. Cho, and S.-K. Beack, "Context adaptive entropy model
+                  for end-to-end optimized image compression," in <i>Proc.
+                    of International Conference on Learning Representations</i>, 2019.<br>
+                  URL: <a href="https://github.com/JooyoungLeeETRI/CA_Entropy_Model">https://github.com/JooyoungLeeETRI/CA_Entropy_Model</a>
+                </p>
+                <p><strong>[CVPR-17]</strong> G. Toderici, D. Vincent, N. Johnston, S. Jin Hwang, D. Minnen,
+                  J. Shor, and M. Covell, "Full resolution image compression with
+                  recurrent neural networks," in <i>Proc. IEEE Conference on Computer
+                    Vision and Pattern Recognition</i>, 2017.<br>
+                  URL: <a href="https://github.com/nmjohn/models/tree/master/compression">https://github.com/nmjohn/models/tree/master/compression</a>
+                </p>
+                <p><strong>[CVPR-18]</strong> F. Mentzer, E. Agustsson, M. Tschannen, R. Timofte, and
+                  L. Van Gool, "Conditional probability models for deep image
+                  compression," in <i>Proc. of IEEE Conference on Computer Vision and
+                    Pattern Recognition</i>, 2018.<br>
+                  URL: <a href="https://github.com/fab-jul/imgcomp-cvpr">https://github.com/fab-jul/imgcomp-cvpr</a>
+                </p>
+              </div>
+            </div>
+            <div class="Details">
+              <h3>Details</h3>
+              <p>For details please refer to the paper on arXiv.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
