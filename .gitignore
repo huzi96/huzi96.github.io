@@ -1,3 +1,4 @@
 .gitignore
 .idea/*
 *.Identifier
+.DS_Store
