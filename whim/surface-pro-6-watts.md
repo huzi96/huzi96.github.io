@@ -14,7 +14,7 @@ I benchmarked my Microsoft Surface Pro 6 model's power consumption with a power 
 | OneNote, scroll with fingers | 11 ~ 12 W|
 | OneNote, write with a pen | 12 ~ 19 W|
 | Touch, select icons on Desktop | ~ 20 W|
-| Heavy CPU/GPU load | > 30W |
+| Heavy CPU/GPU load | > 30 W |
 
 Surface Pro 6 is designed with a 45 Wh battery. Therefore, continuous usage of the touch screen and the pen will quickly drain the battery in few hours.
 

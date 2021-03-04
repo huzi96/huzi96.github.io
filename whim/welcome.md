@@ -9,4 +9,6 @@ The is a new part of this website. I will mostly post debugging experiences, obs
 
 [2021.3.4] [Surface Pro 6 Power Benchmark](surface-pro-6-watts.html)
 
+[2021.3.4] [广渠路东延通车](guangqu-road.html)
+
 <[Home](../index.html)>
