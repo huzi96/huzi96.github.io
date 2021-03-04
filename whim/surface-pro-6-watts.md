@@ -5,7 +5,7 @@
 *Mar. 4 2021* 
 
 
-I benchmarked my Microsoft Surface Pro 6 model's power consumption with a power monitor. The model features an Intel i5-8350U chip. Watts in different usage are shown bellow.
+I benchmarked my Microsoft Surface Pro 6 model's power consumption with a power monitor. The model features an Intel i5-8350U chip. Watts in different usage circumstances are shown bellow.
 
 | Condition | Power Consumption |
 | :--------- | :----------------- |
