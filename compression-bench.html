@@ -145,8 +145,8 @@
 
 <div class="">
   <div style="">
-    <div class="row" style="">
-      <div class="container" style="width: 80%;">
+    <div class="container">
+      <div class="">
         <div class="row">
           <div class="col s12 m12 l10 offset-l1">
             <div class="title">
@@ -194,6 +194,44 @@
               </ul>
             </div>
             <div class="experiment">
+
+              <div class="row">
+                <h3 class="center">Coarse-to-Fine Hyperprior Analysis</h3>
+                <div class="col l4 offset-l4 m6 offset-m3 s10 offset-s1">
+                  <img src="images/Single-Hyper.png" class="responsive-img">
+                </div>
+
+                <div class="col l12 m12 s12">
+                  <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i> With the visualization of the main latent
+                    representations (Main Repr.) and the hyperprior representations shown above, we observe
+                    that though elements in the main representation are assumed to be conditionally independently distributed,
+                    such assumption may not hold. Even with the conditional hyperprior, spatial redundancy is observed.
+                  </p>
+                </div>
+              </div>
+
+            <div class="row">
+                <div class="col l6 offset-l3 m8 offset-m2 s10 offset-s1">
+                  <img src="images/Multi-Hyper.png" class="responsive-img">
+                </div>
+
+              <div class="col l12 m12 s12">
+                <p style="text-align: justify"><i class="material-icons tiny cyan-text">grade</i>
+
+                  We first introduce a fine-grained hyperprior (<strong>Fine</strong>) to more accurately model
+                  the joint probability density. As shown, the residual contains less spatial redundancy, indicating
+                  that the fine hyperprior reduces the redundancy in the main representation. <br>
+
+                  <i class="material-icons tiny cyan-text">grade</i> As the dimensionality of the fine-grained hyperprior is enlarged, its spatial redundancy inevitably
+                  increases. We therefore design a coarse-grained hyperprior (<strong>Coarse</strong>) as the second-order latent variable of the
+                  fine-grained hyperprior. It captures the spatial correlations in the fine-grained hyperprior and helps
+                  reduce the bit-rate of the fine-grained hyperprior.
+                </p>
+              </div>
+            </div>
+
+            </div>
+            <div class="experiment">
               <h3 class="center">Benchmark</h3>
               <h4>Datasets</h4>
               <p><strong>[Kodak]</strong>E. Kodak, "Kodak lossless true color image suite (PhotoCD PCD0992)".<br>
@@ -209,12 +247,21 @@
                 URL: <a href="http://www.compression.cc/2019/challenge/">http://www.compression.cc/2019/challenge/</a><br>
                 (The professional and mobile validation sets are used.)
               </p>
+              <p><strong>[LIU4K]</strong>Jiaying Liu, Dong Liu, Wenhan Yang, Sifeng Xia, Xiaoshuai Zhang, and Yueying Dai.
+                "A Comprehensive Benchmark for Single Image Compression Artifact Reduction",
+                <i>IEEE Transactions on Image Processing</i>, 2020.<br>
+                URL: <a href="https://flyywh.github.io/LIU4K_Website/">https://flyywh.github.io/LIU4K_Website/</a><br>
+                These images in the testing set
+              </p>
               <h4>Methods</h4>
 <!--              <div class="l6 offset-l3 m6 offset-m3 s12">-->
 <!--                <img src="images/Kodak_PSNR.svg" width="80%" style="margin-left: 10%">-->
 <!--                <p class="center" style="font-size: 12pt"><strong>Fig.1 Benchmark results on the Kodak Dataset.</strong></p>-->
 <!--              </div>-->
               <div class="l6 offset-l3 m6 offset-m3 s12">
+                <p><strong>[VTM-8]</strong> Test Model 8 for Versatile Video Coding<br>
+                URL: <a href="https://vcgit.hhi.fraunhofer.de/jvet/VVCSoftware_VTM.git">https://vcgit.hhi.fraunhofer.de/jvet/VVCSoftware_VTM.git</a>
+                </p>
                 <p><strong>[PCS-18]</strong> J. Ball´e, "Efficient nonlinear transforms for lossy image compression,"
                   in <i>Proc. of Picture Coding Symposium</i>, 2018.<br>
                   URL: <a href="https://github.com/tensorflow/compression">https://github.com/tensorflow/compression</a>
@@ -224,7 +271,7 @@
                     of International Conference on Learning Representations</i>, 2018.<br>
                   URL: <a href="https://github.com/tensorflow/compression">https://github.com/tensorflow/compression</a>
                 </p>
-                <p><strong>[NIPS-18]</strong> D. Minnen, J. Ball´e, and G. D. Toderici, "Joint autoregressive and
+                <p><strong>[NeurIPS-18]</strong> D. Minnen, J. Ball´e, and G. D. Toderici, "Joint autoregressive and
                   hierarchical priors for learned image compression," in <i>Proc. of
                     Advances in Neural Information Processing Systems</i>, 2018.<br>
                   URL: <a href="https://github.com/tensorflow/compression">https://github.com/tensorflow/compression</a>
@@ -246,10 +293,12 @@
                     Pattern Recognition</i>, 2018.<br>
                   URL: <a href="https://github.com/fab-jul/imgcomp-cvpr">https://github.com/fab-jul/imgcomp-cvpr</a>
                 </p>
+
+                <p><strong>Please check our paper for quantitative evaluation and comparison.</strong></p>
               </div>
             </div>
             <div class="Details">
-              <h3>Details</h3>
+              <h3 class="center">Further Details</h3>
               <p>For details please refer to the <a href="https://arxiv.org/abs/2002.03711">paper</a> on arXiv.</p>
             </div>
           </div>
