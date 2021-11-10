@@ -1,6 +1,6 @@
 <link href="./retro.css" rel="stylesheet"></link>
 <h1>Build NVIDIA Minkowski Engine on NYU HPC</h1>
-<p><em><strong>Tested in a pip enviroment.</strong></em></p>
+<p><em><strong>Tested in a pip environment.</strong></em></p>
 <h2>1. Compile OpenBlas</h2>
 <p>Download source code from <a href="https://github.com/xianyi/OpenBLAS/releases">https://github.com/xianyi/OpenBLAS/releases</a>, and save it as, say <code>OpenBLAS-0.3.18-x64.zip</code>.</p>
 <p>In the unzipped directory, build and install openblas by</p>
@@ -33,8 +33,8 @@ include_dirs = /path/to/openblas/include
 python setup.py install
 </code></pre>
 <h2>3. Compile Minkowski Engine</h2>
-<p><em><strong>Note: this should be done with a CUDA enviroment. You may want to switch to a GPU node.</strong></em></p>
-<p>Setup enviroments:</p>
+<p><em><strong>Note: this should be done with a CUDA environment. You may want to switch to a GPU node.</strong></em></p>
+<p>Setup environments:</p>
 <pre><code>export CPLUS_INCLUDE_PATH=$C_INCLUDE_PATH:&quot;$HOME/openblas/include&quot;
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:&quot;$HOME/openblas/include&quot;
 export LD_LIBRARY_PATH=&quot;$HOME/openblas/lib&quot;:$LD_LIBRARY_PATH
