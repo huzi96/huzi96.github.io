@@ -1,5 +1,5 @@
 <link href="./retro.css" rel="stylesheet"></link>
-
+<!-- Compile using markdown-it HPC_Minkowski_Engine_build.md -o HPC_Minkowski_Engine_build.html -->
 # Build NVIDIA Minkowski Engine on NYU HPC
 ***Tested in a pip environment.***
 ## 1. Compile OpenBlas
@@ -54,7 +54,8 @@ export LIBRARY_PATH="$HOME/openblas/lib":$LIBRARY_PATH
 ```
 
 Build:
+~~pip install -U MinkowskiEngine --install-option="--blas=openblas" --install-option="--blas_library_dirs=/path/to/openblas/lib" -v --no-deps~~
 ```
-pip install -U MinkowskiEngine --install-option="--blas=openblas" --install-option="--blas_library_dirs=/path/to/openblas/lib" -v --no-deps
+python setup.py install --blas=openblas --blas_library_dirs=/path/to/openblas/lib
 ```
 ```/path/to/openblas``` should be specified.
