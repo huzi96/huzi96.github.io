@@ -1,8 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    <title>How to export 10-bit HDR HEIC (HEIF) pictures in Adobe Lightroom Classic</title>
+</head>
 <link href="./retro.css" rel="stylesheet"></link>
 
 ## How to export 10-bit HDR HEIC (HEIF) pictures in Adobe Lightroom Classic
 
+*Yueyu Hu*
+
 *Sep. 9 2024* 
+
 
 By the time this article is written, the latest Adobe Lightroom (Lr) Classic only support exporting HDR photos to AVIF (AV1 Intra) and JPEG XL. Sadly these formats are not natively supported by Apple devices and Apps like Instagram.  This article describe a (but imperfect) method to export 10-bit HDR HEIC images from Adobe Lightroom Classic. This method has the following limitations:
 
