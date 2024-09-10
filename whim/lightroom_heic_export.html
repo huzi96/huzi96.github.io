@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="How to export 10-bit HDR HEIC (HEIF) pictures in Adobe Lightroom Classic" />
+<meta property="og:url" content="https://huzi96.github.io/whim/lightroom_heic_export.html" />
+<meta property="og:description" content="" />
 <head>
     <title>How to export 10-bit HDR HEIC (HEIF) pictures in Adobe Lightroom Classic</title>
 </head>
