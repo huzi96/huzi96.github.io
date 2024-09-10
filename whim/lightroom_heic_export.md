@@ -13,7 +13,7 @@
 *Sep. 9 2024* 
 
 
-By the time this article is written, the latest Adobe Lightroom (Lr) Classic only support exporting HDR photos to AVIF (AV1 Intra) and JPEG XL. Sadly these formats are not natively supported by Apple devices and Apps like Instagram.  This article describe a (but imperfect) method to export 10-bit HDR HEIC images from Adobe Lightroom Classic. This method has the following limitations:
+By the time this article is written, the latest Adobe Lightroom (Lr) Classic only support exporting HDR photos to AVIF (AV1 Intra) and JPEG XL. Sadly these formats are not natively supported by Apple devices and Apps like Instagram.  This article describes one (but imperfect) method to export 10-bit HDR HEIC images from Adobe Lightroom Classic. This method has the following limitations:
 
 1. The major difficulty to produce Apple device-compatible HEIC files is that it has some special container syntax for fast preview and decoding. Also there are too many color space to choose from. To overcome this issue, the core idea of this method is to call Apple's own API to encode HEIC, which guarantee compatibility. So here we need to run some Swift script calling a macOS API. That means you need a Mac to complete the following steps.
 2. Although the produced HEIC can be viewed in correct color using Apple's Photo App, for 3rd-party Apps like Weibo and Instagram, the color space may not be correctly interpreted, resulting in over-exposed results in Weibo and not-fully-triggered HDR on Instagram (but works fine).
