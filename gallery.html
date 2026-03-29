@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="theme-color" content="#FBD8B0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#FBD8B0" media="(prefers-color-scheme: dark)">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="images/YH.png" />
+  <title>Gallery - Yueyu Hu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: rgb(245, 241, 231);
+      opacity: 1;
+      background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #FBD8B0 0.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+      margin: 0;
+    }
+
+    .vertical-nav {
+      margin: 0;
+      position: fixed;
+      width: 400px;
+      min-height: 100%;
+      background-color: #FBD8B0;
+      opacity: 1;
+      background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #FBD8B0 0.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+      z-index: 10;
+    }
+
+    .nav-inner {
+      padding: 40px 30px;
+      color: #30505D;
+    }
+
+    .nav-inner h4 {
+      margin-top: 0;
+      font-weight: bold;
+    }
+
+    .nav-inner a {
+      color: #30505D;
+    }
+
+    .nav-inner a:hover {
+      color: #F4D03F;
+    }
+
+    .nav-link {
+      display: block;
+      font-size: 1.1em;
+      padding: 8px 0;
+    }
+
+    .main-content {
+      padding-left: 400px;
+    }
+
+    /* Gallery grid */
+    .gallery-container {
+      padding: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery-section-title {
+      color: #30505D;
+      font-size: 1.6em;
+      font-weight: bold;
+      margin: 30px 0 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #F4D03F;
+    }
+
+    .gallery-grid {
+      column-count: 3;
+      column-gap: 16px;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid;
+      margin-bottom: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      background: rgb(252, 250, 244);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item .caption {
+      padding: 10px 12px;
+      color: #30505D;
+      font-size: 0.9em;
+    }
+
+    .gallery-item .caption .title {
+      font-weight: bold;
+    }
+
+    .gallery-item .caption .meta {
+      color: #888;
+      font-size: 0.85em;
+      margin-top: 4px;
+    }
+
+    /* Lightbox */
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .lightbox-caption {
+      color: #eee;
+      margin-top: 16px;
+      font-size: 1.1em;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .lightbox-caption .meta {
+      color: #999;
+      font-size: 0.85em;
+      margin-top: 4px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 2em;
+      cursor: pointer;
+      z-index: 1001;
+      line-height: 1;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .lightbox-close:hover {
+      opacity: 1;
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 2.5em;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+      user-select: none;
+      padding: 20px;
+    }
+
+    .lightbox-nav:hover {
+      opacity: 1;
+    }
+
+    .lightbox-prev {
+      left: 10px;
+    }
+
+    .lightbox-next {
+      right: 10px;
+    }
+
+    /* Mobile layout */
+    @media only screen and (max-width: 992px) {
+      .main-content {
+        padding-left: 0;
+      }
+      .gallery-grid {
+        column-count: 2;
+      }
+      .gallery-container {
+        padding: 16px;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      .gallery-grid {
+        column-count: 1;
+      }
+    }
+
+    .mobile-header {
+      background-color: #FBD8B0;
+      padding: 20px;
+      text-align: center;
+      color: #30505D;
+      background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #FBD8B0 0.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+    }
+
+    .mobile-header a {
+      color: #30505D;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Desktop sidebar -->
+<div class="vertical-nav hide-on-med-and-down">
+  <div class="nav-inner">
+    <h4><a href="index.html">Yueyu Hu</a></h4>
+    <p style="font-size: 1.05em; margin-bottom: 30px;">Photography</p>
+    <a href="index.html" class="nav-link"><i class="fa fa-arrow-left"></i>&ensp;Back to Home</a>
+    <a href="https://instagram.com/minoshirod/" class="nav-link"><i class="fa fa-instagram"></i>&ensp;Instagram</a>
+    <hr style="border-color: rgba(48,80,93,0.2); margin: 20px 0;">
+    <div id="nav-sections" style="font-size: 0.95em;"></div>
+  </div>
+</div>
+
+<!-- Mobile header -->
+<div class="mobile-header hide-on-large-only">
+  <h5 style="margin: 0;"><a href="index.html">Yueyu Hu</a> / Photography</h5>
+  <p style="margin: 5px 0 0;"><a href="index.html"><i class="fa fa-arrow-left"></i> Home</a>
+    &ensp;|&ensp;
+    <a href="https://instagram.com/minoshirod/"><i class="fa fa-instagram"></i> Instagram</a>
+  </p>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+  <div class="gallery-container">
+
+    <!--
+      HOW TO ADD PHOTOS:
+      1. Put your images in the gallery/ folder
+      2. Add a gallery-item div inside the appropriate section:
+
+      <div class="gallery-item" data-title="Photo Title" data-meta="Location, Date | Camera, Lens">
+        <img src="gallery/your-photo.jpg" alt="Photo Title">
+        <div class="caption">
+          <div class="title">Photo Title</div>
+          <div class="meta">Location, Date</div>
+        </div>
+      </div>
+
+      3. To add a new section, use:
+      <div class="gallery-section" data-section="Section Name">
+        <h5 class="gallery-section-title">Section Name</h5>
+        <div class="gallery-grid">
+          ... gallery items ...
+        </div>
+      </div>
+    -->
+      
+
+    <div class="gallery-section" data-section="Featured">
+      <h5 class="gallery-section-title">Featured</h5>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-title="NYC Skyline from Rockaway" data-meta="Rockaway, Queens, NY, Sep 1, 2024 | Sony A7R III, Tamron 70-180mm F2.8 G2 | JPEG Gain Map">
+        <img src="gallery/NYC_Skyline_Rockaway.jpg" alt="NYC Skyline from Rockaway">
+        <div class="caption">
+          <div class="title">NYC Skyline from Rockaway</div>
+          <div class="meta">Queens, NY | Sep 1, 2024 | HDR JPEG Gain Map</div>
+        </div>
+        </div>
+
+        <div class="gallery-item" data-title="Tribute in Light" data-meta="DUMBO, Brooklyn, NY, Sep 11, 2024 | Sony A7R III, Sigma 14-24mm F2.8 | JPEG Gain Map">
+        <img src="gallery/DSC09205-Enhanced-NR.jpg" alt="Tribute in Light">
+        <div class="caption">
+          <div class="title">Tribute in Light</div>
+          <div class="meta">Brooklyn, NY | Sep 11, 2024 | HDR JPEG Gain Map</div>
+        </div>
+        </div>
+
+
+
+        <div class="gallery-item" data-title="Skarðsáfossur" data-meta="Faroe Islands, Oct 12, 2025 | Sony A7R III, 50mm F1.4 GM | AVIF">
+        <img src="gallery/DSC09515.avif" alt="Skarðsáfossur">
+        <div class="caption">
+          <div class="title">Skarðsáfossur</div>
+          <div class="meta">Faroe Islands | Oct 12, 2025 | HDR AVIF </div>
+        </div>
+        </div>
+
+
+        <div class="gallery-item" data-title="Moonrise Stanford Dish" data-meta="Stanford, CA , Sep 6, 2025 | Sony A7R III, Sony E 70-350mm F4.5-6.3 G">
+        <img src="gallery/DSC08420.jpg" alt="Moonrise Stanford Dish">
+        <div class="caption">
+          <div class="title">Moonrise Stanford Dish</div>
+          <div class="meta">Stanford, CA | Sep 6, 2025</div>
+        </div>
+        </div>
+
+
+        <div class="gallery-item" data-title="Hudson River" data-meta="New York, NY , Jul 3, 2022 | Sony A6000, Sigma 16mm F1.4 DC DN">
+        <img src="gallery/DSC04935.avif" alt="Hudson River">
+        <div class="caption">
+          <div class="title">Hudson River</div>
+          <div class="meta">New York, NY | Jul 3, 2022</div>
+        </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- <p style="color: #999; text-align: center; padding: 60px 0; font-size: 1.1em;">
+      Photos coming soon. In the meantime, visit my <a href="https://instagram.com/minoshirod/" style="color: #F4D03F;">Instagram</a>.
+    </p> -->
+
+    <div style="text-align: center; padding: 40px 0 20px; color: #888; font-size: 0.9em;">
+      <p>All photographs &copy; Yueyu Hu. Licensed under
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" style="color: #30505D;" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a>.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox">
+  <span class="lightbox-close" id="lightbox-close">&times;</span>
+  <span class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="fa fa-chevron-left"></i></span>
+  <span class="lightbox-nav lightbox-next" id="lightbox-next"><i class="fa fa-chevron-right"></i></span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption">
+    <div id="lightbox-title"></div>
+    <div class="meta" id="lightbox-meta"></div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  var items = $('.gallery-item');
+  var currentIndex = 0;
+
+  // Build sidebar navigation from sections
+  var navHtml = '';
+  $('.gallery-section').each(function() {
+    var name = $(this).data('section');
+    var id = 'section-' + name.toLowerCase().replace(/\s+/g, '-');
+    $(this).attr('id', id);
+    navHtml += '<a href="#' + id + '" class="nav-link">' + name + '</a>';
+  });
+  $('#nav-sections').html(navHtml);
+
+  // Open lightbox
+  items.on('click', function() {
+    currentIndex = items.index(this);
+    showLightbox(currentIndex);
+  });
+
+  function showLightbox(index) {
+    var item = items.eq(index);
+    var img = item.find('img');
+    $('#lightbox-img').attr('src', img.attr('src'));
+    $('#lightbox-title').text(item.data('title') || '');
+    $('#lightbox-meta').text(item.data('meta') || '');
+    $('#lightbox').addClass('active');
+    $('body').css('overflow', 'hidden');
+  }
+
+  function closeLightbox() {
+    $('#lightbox').removeClass('active');
+    $('body').css('overflow', '');
+  }
+
+  $('#lightbox-close').on('click', closeLightbox);
+  $('#lightbox').on('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  $('#lightbox-prev').on('click', function(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showLightbox(currentIndex);
+  });
+
+  $('#lightbox-next').on('click', function(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % items.length;
+    showLightbox(currentIndex);
+  });
+
+  // Keyboard navigation
+  $(document).on('keydown', function(e) {
+    if (!$('#lightbox').hasClass('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') $('#lightbox-prev').click();
+    if (e.key === 'ArrowRight') $('#lightbox-next').click();
+  });
+});
+</script>
+
+</body>
+</html>
